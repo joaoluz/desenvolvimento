@@ -1,0 +1,29 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+	  <groupId>br.mcti.gov.servico</groupId>
+	  <artifactId>contato-backend</artifactId>
+	  <version>0.0.2-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>contato-integration</artifactId>
+	<packaging>jar</packaging>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>br.gov.mcti</groupId>
+  			<artifactId>jee7-framework</artifactId>
+			<version>${version.jee7framework}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.google.code.gson</groupId>
+		    <artifactId>gson</artifactId>
+		    <version>2.7</version>
+		</dependency>
+
+	</dependencies>
+
+</project>

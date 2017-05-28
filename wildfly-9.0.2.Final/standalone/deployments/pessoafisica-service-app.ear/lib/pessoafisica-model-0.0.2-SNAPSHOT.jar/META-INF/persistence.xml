@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="unit-pessoa" transaction-type="JTA">
+		<jta-data-source>java:jboss/datasources/corporativoDS</jta-data-source>
+		<properties>
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.format_sql" value="false" />
+			<property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect" />
+			<property name="hibernate.connection.characterEncoding"
+				value="UTF-8" />
+			<property name="hibernate.connection.useUnicode" value="true" />
+			<property name="hibernate.connection.charSet" value="UTF-8" />
+			<property name="javax.persistence.schema-generation.database.action"
+				value="none" />
+			<property name="javax.persistence.sql-load-script-source"
+				value="" />
+		</properties>
+	</persistence-unit>
+
+	<persistence-unit name="imagem-unit" transaction-type="JTA">
+		<provider>org.hibernate.ogm.jpa.HibernateOgmPersistence</provider>
+		<class>br.gov.mcti.servicos.pessoafisica.model.ImagemPessoa</class>
+		<properties>
+			<property name="hibernate.transaction.jta.platform"
+				value="org.hibernate.service.jta.platform.internal.JBossAppServerJtaPlatform" />
+			<property name="hibernate.ogm.datastore.database" value="MCTI" />
+			<property name="hibernate.ogm.datastore.host" value="172.24.129.3" />
+			<property name="hibernate.ogm.datastore.port" value="27017" />
+			<property name="hibernate.ogm.datastore.provider" value="MONGODB" />
+		</properties>
+	</persistence-unit>
+
+</persistence>
